@@ -70,8 +70,8 @@ npm run dev
 ##Environment Info:-
 | Tool       | Version |
 | ---------- | ------- |
-| Node.js    | 18+     |
-| npm        | 8+      |
+| Node.js    | 24.8.0  |
+| npm        | 11.6.0  |
 | TypeScript | 5+      |
 | Vite       | 5+      |
 
