@@ -1,73 +1,79 @@
-# React + TypeScript + Vite
+# 🧠 Jobicy Remote Jobs App
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+A simple full-stack web app built with **React + Vite (TypeScript)**, **Tailwind CSS**, and an **Express.js backend** that fetches and displays the latest remote jobs using the [Jobicy API](https://jobicy.com/api/v2/remote-jobs).
 
-Currently, two official plugins are available:
+---
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## 🚀 Features
 
-## React Compiler
+- Fetches and displays the **latest remote jobs** from Jobicy’s public API.
+- Displays job listings in a clean **responsive grid layout**.
+- Backend **proxy server** built with Express to handle CORS and API calls.
+- Fully typed with **TypeScript**.
+- Built with **Vite** for a fast development experience.
+- Ready for **future enhancements**, such as:
+  - Job search and filtering by keyword or region.
+  - Auto-refresh for new job postings.
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+---
 
-## Expanding the ESLint configuration
+## 🛠️ Tech Stack
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
+| Layer | Technology |
+|--------|-------------|
+| Frontend | React + Vite + TypeScript |
+| Styling | Tailwind CSS |
+| Backend | Express.js + Axios + TypeScript |
+| API | [Jobicy Remote Jobs API](https://jobicy.com/api/v2/remote-jobs) |
 
-```js
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
+---
 
-      // Remove tseslint.configs.recommended and replace with this
-      tseslint.configs.recommendedTypeChecked,
-      // Alternatively, use this for stricter rules
-      tseslint.configs.strictTypeChecked,
-      // Optionally, add this for stylistic rules
-      tseslint.configs.stylisticTypeChecked,
+## 📁 Project Structure (comming soon)
 
-      // Other configs...
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
+## ⚙️ Installation & Setup
+
+### 1️⃣ Clone the repository
+```bash
+git clone https://github.com/<your-username>/jobicy-app.git
+cd jobicy-app
+
 ```
 
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
-
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
-
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
-      // Enable lint rules for React
-      reactX.configs['recommended-typescript'],
-      // Enable lint rules for React DOM
-      reactDom.configs.recommended,
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
+2️⃣ Install frontend dependencies
+```bash
+cd jobicy-client
+npm install
 ```
+
+3️⃣ Install backend dependencies
+
+```bash
+cd ../server
+npm install
+```
+
+▶️ Running the App Locally
+🖥️ Start the Backend
+
+From the server/ directory:
+```bash
+npx tsx server.ts
+```
+
+💻 Start the Frontend
+
+Open a new terminal and run:
+```bash
+cd jobicy-client
+npm run dev
+```
+##Environment Info:-
+| Tool       | Version |
+| ---------- | ------- |
+| Node.js    | 18+     |
+| npm        | 8+      |
+| TypeScript | 5+      |
+| Vite       | 5+      |
+
+
+
