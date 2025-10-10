@@ -7,6 +7,10 @@ import Register from "./pages/Register";
 import { LogoutButton } from "./pages/Sout";
 import { useAuth } from "./context/AuthContext"; // 👈 custom Firebase hook
 
+// IconPack
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import { faHouse, faBriefcase } from '@fortawesome/free-solid-svg-icons'
+
 interface Job {
   id: string;
   jobTitle: string;
@@ -69,9 +73,8 @@ function JobsPage() {
   if (loading) {
     return (
       <div
-        className={`min-h-screen flex items-center justify-center ${
-          darkMode ? "bg-gray-900" : "bg-gray-50"
-        }`}
+        className={`min-h-screen flex items-center justify-center ${darkMode ? "bg-gray-900" : "bg-gray-50"
+          }`}
       >
         <div className="text-center">
           <div className="animate-spin rounded-full h-12 w-12 border-b-2 border-blue-600 mx-auto mb-4"></div>
@@ -86,9 +89,8 @@ function JobsPage() {
   if (error) {
     return (
       <div
-        className={`min-h-screen flex items-center justify-center ${
-          darkMode ? "bg-gray-900" : "bg-gray-50"
-        }`}
+        className={`min-h-screen flex items-center justify-center ${darkMode ? "bg-gray-900" : "bg-gray-50"
+          }`}
       >
         <div className="text-center">
           <p className="text-red-500 text-lg">{error}</p>
@@ -99,15 +101,13 @@ function JobsPage() {
 
   return (
     <div
-      className={`min-h-screen transition-colors duration-200 ${
-        darkMode ? "bg-gray-900" : "bg-gray-50"
-      }`}
+      className={`min-h-screen transition-colors duration-200 ${darkMode ? "bg-gray-900" : "bg-gray-50"
+        }`}
     >
       {/* Header */}
       <header
-        className={`border-b ${
-          darkMode ? "bg-gray-800 border-gray-700" : "bg-white border-gray-200"
-        }`}
+        className={`border-b ${darkMode ? "bg-gray-800 border-gray-700" : "bg-white border-gray-200"
+          }`}
       >
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-6 flex items-center justify-between">
           <div className="flex items-center gap-3">
@@ -115,20 +115,18 @@ function JobsPage() {
               className={`w-8 h-8 ${darkMode ? "text-blue-400" : "text-blue-600"}`}
             />
             <h1
-              className={`text-2xl font-semibold ${
-                darkMode ? "text-white" : "text-gray-900"
-              }`}
+              className={`text-2xl font-semibold ${darkMode ? "text-white" : "text-gray-900"
+                }`}
             >
               Remote Marketing Jobs
             </h1>
           </div>
           <button
             onClick={() => setDarkMode(!darkMode)}
-            className={`p-2 rounded-lg transition-colors ${
-              darkMode
-                ? "bg-gray-700 hover:bg-gray-600 text-yellow-400"
-                : "bg-gray-100 hover:bg-gray-200 text-gray-700"
-            }`}
+            className={`p-2 rounded-lg transition-colors ${darkMode
+              ? "bg-gray-700 hover:bg-gray-600 text-yellow-400"
+              : "bg-gray-100 hover:bg-gray-200 text-gray-700"
+              }`}
             aria-label="Toggle theme"
           >
             {darkMode ? <Sun className="w-5 h-5" /> : <Moon className="w-5 h-5" />}
@@ -141,9 +139,8 @@ function JobsPage() {
         {jobs.length === 0 ? (
           <div className="text-center py-12">
             <p
-              className={`text-lg ${
-                darkMode ? "text-gray-400" : "text-gray-500"
-              }`}
+              className={`text-lg ${darkMode ? "text-gray-400" : "text-gray-500"
+                }`}
             >
               No jobs available at the moment.
             </p>
@@ -153,16 +150,14 @@ function JobsPage() {
             {jobs.slice(0, 10).map((job) => (
               <article
                 key={job.id}
-                className={`rounded-lg p-6 transition-all duration-200 hover:scale-[1.02] ${
-                  darkMode
-                    ? "bg-gray-800 border border-gray-700 hover:border-gray-600"
-                    : "bg-white border border-gray-200 hover:shadow-lg"
-                }`}
+                className={`rounded-lg p-6 transition-all duration-200 hover:scale-[1.02] ${darkMode
+                  ? "bg-gray-800 border border-gray-700 hover:border-gray-600"
+                  : "bg-white border border-gray-200 hover:shadow-lg"
+                  }`}
               >
                 <h2
-                  className={`text-lg font-semibold mb-3 line-clamp-2 ${
-                    darkMode ? "text-white" : "text-gray-900"
-                  }`}
+                  className={`text-lg font-semibold mb-3 line-clamp-2 ${darkMode ? "text-white" : "text-gray-900"
+                    }`}
                 >
                   {job.jobTitle}
                 </h2>
@@ -170,14 +165,12 @@ function JobsPage() {
                 <div className="space-y-2 mb-4">
                   <div className="flex items-center gap-2">
                     <Building2
-                      className={`w-4 h-4 flex-shrink-0 ${
-                        darkMode ? "text-gray-400" : "text-gray-500"
-                      }`}
+                      className={`w-4 h-4 flex-shrink-0 ${darkMode ? "text-gray-400" : "text-gray-500"
+                        }`}
                     />
                     <span
-                      className={`text-sm ${
-                        darkMode ? "text-gray-300" : "text-gray-700"
-                      }`}
+                      className={`text-sm ${darkMode ? "text-gray-300" : "text-gray-700"
+                        }`}
                     >
                       {job.companyName}
                     </span>
@@ -185,14 +178,12 @@ function JobsPage() {
 
                   <div className="flex items-center gap-2">
                     <MapPin
-                      className={`w-4 h-4 flex-shrink-0 ${
-                        darkMode ? "text-gray-400" : "text-gray-500"
-                      }`}
+                      className={`w-4 h-4 flex-shrink-0 ${darkMode ? "text-gray-400" : "text-gray-500"
+                        }`}
                     />
                     <span
-                      className={`text-sm ${
-                        darkMode ? "text-gray-400" : "text-gray-600"
-                      }`}
+                      className={`text-sm ${darkMode ? "text-gray-400" : "text-gray-600"
+                        }`}
                     >
                       {job.jobGeo}
                     </span>
@@ -201,14 +192,12 @@ function JobsPage() {
                   {formatSalary(job.annualSalaryMin, job.annualSalaryMax) && (
                     <div className="flex items-center gap-2">
                       <DollarSign
-                        className={`w-4 h-4 flex-shrink-0 ${
-                          darkMode ? "text-gray-400" : "text-gray-500"
-                        }`}
+                        className={`w-4 h-4 flex-shrink-0 ${darkMode ? "text-gray-400" : "text-gray-500"
+                          }`}
                       />
                       <span
-                        className={`text-sm font-medium ${
-                          darkMode ? "text-green-400" : "text-green-600"
-                        }`}
+                        className={`text-sm font-medium ${darkMode ? "text-green-400" : "text-green-600"
+                          }`}
                       >
                         {formatSalary(job.annualSalaryMin, job.annualSalaryMax)}
                       </span>
@@ -218,11 +207,10 @@ function JobsPage() {
 
                 <div className="flex items-center justify-between mt-4 pt-4 border-t border-gray-200 dark:border-gray-700">
                   <span
-                    className={`text-xs px-3 py-1 rounded-full ${
-                      darkMode
-                        ? "bg-gray-700 text-gray-300"
-                        : "bg-gray-100 text-gray-600"
-                    }`}
+                    className={`text-xs px-3 py-1 rounded-full ${darkMode
+                      ? "bg-gray-700 text-gray-300"
+                      : "bg-gray-100 text-gray-600"
+                      }`}
                   >
                     {job.jobType}
                   </span>
@@ -230,11 +218,10 @@ function JobsPage() {
                     href={job.url}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className={`text-sm font-medium transition-colors ${
-                      darkMode
-                        ? "text-blue-400 hover:text-blue-300"
-                        : "text-blue-600 hover:text-blue-700"
-                    }`}
+                    className={`text-sm font-medium transition-colors ${darkMode
+                      ? "text-blue-400 hover:text-blue-300"
+                      : "text-blue-600 hover:text-blue-700"
+                      }`}
                   >
                     View Details →
                   </a>
@@ -255,9 +242,14 @@ export default function App() {
     <Router>
       {/* Navbar */}
       <nav className="bg-gray-800 text-white p-4 flex justify-between">
+        
         <div className="flex gap-4">
-          <Link to="/">Home</Link>
-          <Link to="/jobs">Jobs</Link>
+          <Link to="/">
+          <FontAwesomeIcon icon={faHouse} />
+          Home</Link>
+          <Link to="/jobs">
+          <FontAwesomeIcon icon={faBriefcase} />
+          Jobs</Link>
         </div>
         {user ? (
           <LogoutButton />
