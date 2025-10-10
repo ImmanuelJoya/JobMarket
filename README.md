@@ -23,7 +23,7 @@ A simple full-stack web app built with **React + Vite (TypeScript)**, **Tailwind
 |--------|-------------|
 | Frontend | React + Vite + TypeScript |
 | Styling | Tailwind CSS |
-| Backend | Express.js + Axios + TypeScript |
+| Backend | Express.js + Axios + TypeScript + Firebase |
 | API | [Jobicy Remote Jobs API](https://jobicy.com/api/v2/remote-jobs) |
 
 ---
@@ -42,14 +42,14 @@ cd jobicy-app
 2️⃣ Install frontend dependencies
 ```bash
 cd jobicy-client
-npm install
+npm i
 ```
 
 3️⃣ Install backend dependencies
 
 ```bash
 cd ../server
-npm install
+npm i
 ```
 
 ▶️ Running the App Locally
@@ -67,7 +67,7 @@ Open a new terminal and run:
 cd jobicy-client
 npm run dev
 ```
-##Environment Info:-
+## Environment Info:-
 | Tool       | Version |
 | ---------- | ------- |
 | Node.js    | 24.8.0  |
