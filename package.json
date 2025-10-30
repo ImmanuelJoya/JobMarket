@@ -1,5 +1,5 @@
 {
-  "name": "jobicy-client",
+  "name": "jobicy-client", 
   "private": true,
   "version": "0.0.0",
   "type": "module",
